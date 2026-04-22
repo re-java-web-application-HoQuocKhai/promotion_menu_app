@@ -2,10 +2,6 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" lang="vi"
       layout:decorate="~{layouts/home}">
-<head>
-  <link rel="stylesheet" th:href="@{/resources/css/style.css}">
-  <title>Promotion Menu App</title>
-</head>
 <body>
 
 <main layout:fragment="content">
@@ -21,8 +17,8 @@
     <tr th:each="promotion : ${promotions}">
       <td th:text="${promotion.id}"></td>
       <td th:text="${promotion.name}"></td>
-      <td th:text="${promotion.age}"></td>
-      <td th:text="${promotion.id}"></td>
+      <td th:text="${promotion.originalPrice}"></td>
+      <td th:text="${promotion.discountPercent}"></td>
       <td>
         <button class="detail-btn">Detail</button>
         <button class="edit-btn">Edit</button>
@@ -32,5 +28,6 @@
     </tr>
   </table>
 </main>
+
 </body>
 </html>
